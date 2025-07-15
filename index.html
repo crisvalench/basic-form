@@ -4,16 +4,62 @@
         <title> Student Page </title>
     </head>
     <style>
-        h2{
-            color: #721422;
+        body{
+             padding: 40px;
         }
+        h2{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: uppercase;
+            color: #721422;
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 20px;
+            
+        }
+        p{
+            text-align: center;
+            font-size: 18px;
+            width: 30%; 
+            margin: auto; 
+            margin-bottom: 20px;
+        }
+        form{
+            border: solid;
+            border-color: #721422; 
+            background-color: rgba(253, 226, 192, 0.767); 
+            border-radius: 10px; 
+            width: 30%; 
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+        }
+        .print{
+            width: 150px;
+            background-color: #721422; 
+            color: white; 
+            font-size: 15px;
+            padding: 8px; 
+            border-radius: 10px;
+        }
+        .reset{
+            width: 150px;
+            background-color: #000000; 
+            color: white; 
+            font-size: 15px;
+            padding: 8px; 
+            border-radius: 10px;
+        }
+        label{
+            font-family: Roboto;
+        }
+    
     </style>
     <body>
 
         <h2 id = "title-page">Student Data</h2>
         <p>Please, introduce your full name.</p>
         
-        <form id = 'form' style="border: solid;border-color: #721422; background-color: rgba(253, 226, 192, 0.767); border-radius: 10px; width: 30%; padding: 15px;">
+        <form id = 'form'>
             <label for="firstName" style="font-weight: bold;">Name</label><br>
             <input type="text" id="firstName" name="firstName"><br>
         <br>
@@ -23,11 +69,11 @@
             <label for="age" style="font-weight: bold">Age</label><br>
             <input type="number" min= '0' id="age" name="age"><br>
         <br>
-            <input type="button" value="Print Full Name 👀" style= "background-color: #721422; color: white; padding: 5px; border-radius: 10px;" onclick= "printFormValues(event)">
-            <input type="button" value="Clear" style= "background-color: #000000; color: white; padding: 5px; border-radius: 10px;" onclick= "resetFormvalues(event)">
+            <input class= 'print' type="button" value="Print Full Name 👀" onclick= "printFormValues(event)">
+            <input class= 'reset' type="button" value="Clear" onclick= "resetFormvalues(event)">
         </form>
         
-        <script src="home.js"></script>
+        <script src="index.js"></script>
           
         <!--.innertext para ver "TEST"-->
         <!--//document.getElementById-->
